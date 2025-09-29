@@ -1,0 +1,25 @@
+<app-page-title [title]="'Here are the authors you can find in our library.'" />
+
+<app-author-filters (authorFilterChanged)="getFilteredAuthors($event)" />
+
+<div class="list-container">
+  @for(author of authorList; track author){
+  <div class="card">
+    <div>
+      <span>author #{{ author.id }}</span>
+      <div class="details">
+        <span>First name: {{ author.firstname }}</span>
+        <span>Last name: {{ author.lastname }}</span>
+        <span>Date of birth: {{ author.birthdate }}</span>
+      </div>
+    </div>
+    <div class="actions">
+      <a (click)="view(author.id)">View</a>
+      <a (click)="edit(author.id)">Edit</a>
+      <a (click)="delete(author.id)">Delete</a>
+    </div>
+  </div>
+  } @empty {
+  <span>No author information found...</span>
+  }
+</div>

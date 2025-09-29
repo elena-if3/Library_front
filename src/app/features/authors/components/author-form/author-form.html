@@ -1,0 +1,15 @@
+<div [formGroup]="authorForm">
+  @let f = authorControls.firstname; @let l = authorControls.lastname;
+
+  <div class="">
+    <div class="">
+      <label for="firstname">First name:</label>
+      @if(f.invalid && (f.dirty || f.touched)){ @if(f.hasError('required')){
+      <span class="error">First name required!</span>
+      } @if(f.hasError('minlength')) {
+      <span class="error">First name length invalid!</span>
+      } }
+    </div>
+    <div></div>
+  </div>
+</div>

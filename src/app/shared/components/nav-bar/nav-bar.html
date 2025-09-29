@@ -1,0 +1,37 @@
+<nav>
+  <ul>
+    <li><a [routerLinkActive]="'active'" [routerLink]="'/home'">Home</a></li>
+    <li>
+      <a
+        [routerLinkActive]="'active'"
+        [routerLink]="'/authors'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Authors</a
+      >
+    </li>
+    <li>
+      <a
+        [routerLinkActive]="'active'"
+        [routerLink]="'/authors/new'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >New author</a
+      >
+    </li>
+    <li>
+      <a
+        [routerLinkActive]="'active'"
+        [routerLink]="'/books'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Books</a
+      >
+    </li>
+    <li>
+      <a
+        [routerLinkActive]="'active'"
+        [routerLink]="'/books/new'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >New book</a
+      >
+    </li>
+  </ul>
+</nav>

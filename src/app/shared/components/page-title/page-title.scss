@@ -1,0 +1,24 @@
+.page-title {
+  text-align: left;
+  margin-bottom: 2rem;
+
+  &.center {
+    text-align: center;
+  }
+
+  &.right {
+    text-align: right;
+  }
+
+  h1 {
+    font-size: 2rem;
+    padding: 0.5rem;
+    color: indianred;
+  }
+
+  span {
+    font-size: 1.7rem;
+    padding: 0.5rem;
+    color: indianred;
+  }
+}
