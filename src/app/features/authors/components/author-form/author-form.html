@@ -1,5 +1,6 @@
 <div [formGroup]="authorForm">
-  @let f = authorControls.firstname; @let l = authorControls.lastname;
+  @let f = authorControls.firstname; @let l = authorControls.lastname; @let b =
+  authorControls.birthdate;
 
   <div class="">
     <div class="">
@@ -10,6 +11,19 @@
       <span class="error">First name length invalid!</span>
       } }
     </div>
-    <div></div>
+    <div class="">
+      <label for="lastname">Last name:</label>
+      @if(l.invalid && (l.dirty || l.touched)) { @if(l.hasError('required')){
+      <span class="error">Last name required!</span>
+      } @if(l.hasError('minlength')) {
+      <span class="error">Last name length invalid!</span>
+      } }
+    </div>
+    <div class="">
+      <label for="birthdate">Date of birth:</label>
+      @if(b.invalid && (b.dirty || b.touched)){
+      <span></span>
+      }
+    </div>
   </div>
 </div>
